@@ -259,6 +259,18 @@ button:active {
   transition: all 0.3s ease;
 }
 
+.sprite{
+  background-color: var(--clr-accent);
+  padding: 6px;
+  border-radius: 8px;
+}
+
+
+.sprite :hover{
+ background-color: white 0 -15px;
+ cursor: pointer; 
+}
+
 .form-group label {
   position: absolute;
   left: 10px;
