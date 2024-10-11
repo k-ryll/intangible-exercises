@@ -1,0 +1,351 @@
+:root{
+  --clr-bg: #FFE1FF;
+  --clr-accent: #E4B1F0;
+  --clr-accent-100: #7E60BF;
+  --clr-primary:#433878;
+  --clr-primary-100:#2f2856;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--clr-bg);
+
+}
+
+header {
+  background-color:var(--clr-accent-100);
+  color: #fff;
+  margin-top: 2rem;
+  border-radius: 50px;
+}
+
+button{
+  border-radius: 8px;
+  background-color: var(--clr-accent-100);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: var(--clr-accent-100);
+  color: white;
+  transform: scale(0.8);
+}
+
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar ul li{
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.navbar ul li:hover{
+  background-color: var(--clr-primary-100);
+  cursor: pointer;
+  
+}
+
+.navbar .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left:5%;
+  background-color: var(--clr-accent);
+  padding: 0;
+  list-style: none;
+}
+
+.navbar .dropdown li a {
+  padding: 10px 20px;
+  white-space: nowrap;
+  
+}
+
+.navbar li.shop:hover .dropdown {
+  display: block;
+  z-index: 10;
+}
+
+.product-list {
+  display: flex;
+  
+}
+
+.main-products{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product {
+  background-color: white;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+  flex: 1 1 200px;
+  max-width: 250px;
+  box-shadow: 10px 10px 5px var(--clr-accent);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product > h2 {
+  color: var(--clr-primary);
+  font-size: 1rem;
+}
+
+.product > img{
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  opacity: .8;
+  cursor: pointer;
+}
+
+.product img:hover{
+  opacity: 1;
+}
+
+.product h2 + .price {
+  color: var(--clr-accent);
+  font-weight: bold;
+
+}
+
+.product h2 ~ button {
+  background-color: var(--clr-accent);
+  color: white;
+  border: none;
+  padding: 10px;
+  opacity: .6;
+}
+
+.product h2 ~ button:hover {
+  background-color: var(--clr-accent);
+  cursor: pointer;
+  opacity: 1;
+}
+
+[sale="true"] {
+  border: green 2px solid;
+  position: relative; 
+}
+[sale="true"]::before {
+  content: "SALE";
+  color: white;
+  background-color: red;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  position: absolute;
+  top: 10px; 
+  left: 10px;
+  z-index: 1; 
+  font-weight: bold;
+  border-radius: 3px; 
+}
+
+.cart {
+  margin-left: 20px; 
+  margin-top: 20px;
+  padding: 15px;
+  border: 3px solid var(--clr-accent);
+  min-width: 250px; 
+  border-radius: 8px;
+}
+
+.cart-list {
+  counter-reset: cart-counter; 
+  list-style: none; 
+  padding: 0; 
+}
+
+.cart-list li {
+  counter-increment: cart-counter; 
+  margin-bottom: 5px; 
+}
+
+.cart-list li::before {
+  content: counter(cart-counter) ". ";
+  font-weight: bold; 
+  color: var(--clr-primary); }
+
+
+.total-price {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.add-to-cart::before {
+  content: "🛒";
+  margin-right: 5px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 4px;
+}
+
+.product h2::after {
+  content: "  ☆";
+  color: var(--clr-accent);
+}
+.checkout {
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  max-width: 50rem;
+  border: 2px solid var(--clr-accent);
+  margin-top: 1rem;
+}
+
+.checkoutdiv{
+  display: flex;
+  gap: 1rem;
+}
+
+.checkout-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.checkout h3 {
+  text-align: center;
+  color: var(--clr-primary-100);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.form-group label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #777;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group input:not(:placeholder-shown) {
+  border-color: var(--clr-accent);
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 5px;
+  font-size: 12px;
+  color: var(--clr-accent-100);
+  padding: 0 5px;
+  
+}
+
+.checkout-form button:hover {
+  background-color: var(--clr-accent);
+}
+
+
+.dropdown {
+  display: none; /* Hide dropdown by default */
+  position: absolute; /* Position it relative to the parent */
+  background-color: #333; /* Same background color as nav */
+  min-width: 160px; /* Set a minimum width for the dropdown */
+  z-index: 1; /* Ensure dropdown is above other content */
+ 
+}
+
+.dropdown li {
+  display: block; /* Make dropdown items stack vertically */
+}
+
+nav ul > li:hover .dropdown {
+  display: block; /* Show dropdown on hover */
+}
+
+.dropdown a {
+  padding: 12px 16px; /* Add padding to dropdown items */
+  color: white; /* Text color for dropdown */
+}
+
+.dropdown a:hover {
+  background-color: #575757; /* Background on hover for dropdown items */
+}
+
+.account img{
+  background-color: white;
+  padding: 2px;
+  border-radius: 20px;
+}
+
+main{
+  padding: 20px;
+}
+
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: var(--clr-accent-100);
+  color: white;
+  width: 100vw; 
+  height:5vh; 
+}
+
+@media (max-width: 768px) {
+  .product-list {
+      flex-direction: column; 
+  }
+  .cart {
+    margin: 0 0 10px 0;
+  }
+  .main-products{
+    justify-content: center;
+  }
+  .cart, .main-products {
+      max-width: 100%; 
+  }
+}
+
+

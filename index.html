@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My E-Commerce Store</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="shop"><a href="#">Shop</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Clothes</a></li>
+                    <li><a href="#">Album</a></li>
+                    <li><a href="#">Accessories</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#checkout">Checkout</a></li>
+                <li>
+                  <a href="#" class="account"><img src="/images/user.png" width="25px" alt=""></a>
+                  <ul class="dropdown">
+                      <li><a href="#">Profile</a></li>
+                      <li><a href="#">Orders</a></li>
+                      <li><a href="#">Logout</a></li>
+                  </ul>
+              </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" id="container">
+        <section class="product-list">
+          <div class="main-products">
+            <div class="product">
+                <img src="/images/product1.webp" alt="Product 1">
+                <h2>vampire vinyl</h2>
+                <p>$15.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/images/product2.webp" alt="Product 2">
+                <h2>GUTS world tour beanie</h2>
+                <p>$35.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+              <img src="/images/product3.webp" alt="Product 1">
+              <h2>star necklace</h2>
+              <p>$35.00</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div sale="true" class="product">
+              <img src="/images/product4.webp" alt="Product 2">
+              <h2>GUTS longsleeve</h2>
+              <p>$40.00</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="/images/product5.webp" alt="Product 1">
+            <h2>GUTS world tour poster</h2>
+            <p>$25.00</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="/images/product6.webp" alt="Product 2">
+            <h2>live tank poster</h2>
+            <p>$25.00</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="/images/product7.webp" alt="Product 1">
+          <h2>vampire lover charm</h2>
+          <p>$10.00</p>
+          <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product" sale="true">
+          <img src="/images/product8.webp" alt="Product 2">
+          <h2>GUTS live t-shirt in pepper</h2>
+          <p>$40.00</p>
+          <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product">
+                <img src="/images/product9.webp" alt="Product 1">
+                <h2>GUTS marbled silver vinyl</h2>
+                <p>$30.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/images/product10.webp" alt="Product 2">
+                <h2>vampire elastic bandage tin</h2>
+                <p>$15.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+
+            </div>
+            <aside class="cart">
+              <h2>Your Cart</h2>
+              <ul class="cart-list" id="cart-list">
+                  <li>vampire vinyl - $15.00</li>
+                  <li>GUTS world tour beanie - $35.00</li>
+                  <li>star necklace - $35.00</li>
+                  <li>GUTS world tour setlist longsleeve - $40.00</li>
+              </ul>
+              <p class="total-price">Total: $125.00</p>
+          </aside>
+        </section>
+
+        <section class="checkout" id="checkout">
+          <h3>Checkout</h3>
+          <form class="checkout-form">
+            <div class="checkoutdiv">
+              <div class="">
+                <div class="form-group">
+                  <input type="text" id="name" required placeholder=" ">
+                  <label for="name">Name</label>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" required placeholder=" ">
+                <label for="email">Email</label>
+            </div>
+    
+            <div class="form-group">
+                <input type="text" id="address" required placeholder=" ">
+                <label for="address">Address</label>
+            </div>
+              </div>
+              <div>
+                <div class="form-group">
+                  <input type="text" id="creditcard" required placeholder=" ">
+                  <label for="creditcard">Credit Card Number</label>
+              </div>
+      
+              <div class="form-group">
+                  <input type="text" id="expiration" required placeholder=" ">
+                  <label for="expiration">Expiration Date (MM/YY)</label>
+              </div>
+      
+              <div class="form-group">
+                  <input type="text" id="cvv" required placeholder=" ">
+                  <label for="cvv">CVV</label>
+              </div>
+              </div>
+              
+
+              </div>
+              <div>
+                <button type="submit">Submit</button>
+              </div>
+      
+              
+          </form>
+      </section>
+      
+
+      
+    </main>
+
+    <footer>
+        <p>© 2024 My E-Commerce Store</p>
+    </footer>
+</body>
+</html>
