@@ -116,6 +116,7 @@ button:active {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .product > h2 {
@@ -156,6 +157,7 @@ button:active {
   cursor: pointer;
   opacity: 1;
 }
+
 
 [sale="true"] {
   border: green 2px solid;
@@ -205,6 +207,7 @@ button:active {
   font-weight: bold;
   margin-top: 10px;
 }
+
 .add-to-cart::before {
   content: "🛒";
   margin-right: 5px;
@@ -259,17 +262,7 @@ button:active {
   transition: all 0.3s ease;
 }
 
-.sprite{
-  background-color: var(--clr-accent);
-  padding: 6px;
-  border-radius: 8px;
-}
 
-
-.sprite :hover{
- background-color: white 0 -15px;
- cursor: pointer; 
-}
 
 .form-group label {
   position: absolute;
